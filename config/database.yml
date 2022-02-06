@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  enconding: unicode
+  host: localhost
+  username: postgres
+  password: postgres
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: dev_descontodb
+
+test:
+  <<: *default
+  database: test_descontodb
+
+production:
+  <<: *default
+  database: pro_descontodb
