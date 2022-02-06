@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_06_180835) do
+ActiveRecord::Schema.define(version: 2022_02_06_192428) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "contatos", force: :cascade do |t|
+    t.integer "telefone"
+    t.string "tipo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "referencia"
+    t.bigint "proponente_id"
+    t.index ["proponente_id"], name: "index_contatos_on_proponente_id"
+  end
 
   create_table "enderecos", force: :cascade do |t|
     t.string "nome"
@@ -24,6 +34,8 @@ ActiveRecord::Schema.define(version: 2022_02_06_180835) do
     t.integer "cep"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "proponente_id"
+    t.index ["proponente_id"], name: "index_enderecos_on_proponente_id"
   end
 
   create_table "pessoas", force: :cascade do |t|
@@ -32,4 +44,15 @@ ActiveRecord::Schema.define(version: 2022_02_06_180835) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "proponentes", force: :cascade do |t|
+    t.string "nome"
+    t.string "cpf"
+    t.date "data_nascimento"
+    t.decimal "salario"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "contatos", "proponentes"
+  add_foreign_key "enderecos", "proponentes"
 end
