@@ -1,16 +1,24 @@
-main.form-signin
-  form
-    img.mb-4 alt="" height="57" src="/docs/5.1/assets/brand/bootstrap-logo.svg" width="72" /
-    h1.h3.mb-3.fw-normal Please sign in
-    .form-floating
-      input#floatingInput.form-control placeholder="name@example.com" type="email" /
-      label for="floatingInput"  Email address
-    .form-floating
-      input#floatingPassword.form-control placeholder="Password" type="password" /
-      label for="floatingPassword"  Password
-    .checkbox.mb-3
-      label
-        input type="checkbox" value="remember-me" /
-        | Remember me
-    button.w-100.btn.btn-lg.btn-primary type="submit"  Sign in
-    p.mt-5.mb-3.text-muted &copy; 2017–2021
+.row.align-items-center
+  .col-8
+    span.align-bottom
+      h1 Bem vindo à DescontoINSS!
+      h4.fw-normal Aplicação para cálculo de desconto do INSS sobre o salário/renda, utilizando as faixas padrão do Brasil.
+
+  .col-4
+    main.form-signin
+      form
+        h1.h3.mb-3.fw-normal Faça seu login
+        .form-floating
+          input#floatingInput.form-control placeholder="name@example.com" type="email"
+          label for="floatingInput" Endereço de email
+        
+        .form-floating
+          input#floatingPassword.form-control placeholder="Password" type="password"
+          label for="floatingPassword" Senha
+        
+        .checkbox.mb-3
+          input type="checkbox" value="remember-me" label="Remember"
+          label Continuar conectado
+        
+        button.w-100.btn.btn-lg.btn-primary type="submit"  Sign in
+        p.mt-5.mb-3.text-muted &copy; 2017–2021
