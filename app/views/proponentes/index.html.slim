@@ -1,0 +1,19 @@
+.card
+  .card-body
+    table.table.table-striped
+      thead 
+        tr
+          th CPF
+          th Nome
+          th Data nascimento
+          th Endereço
+          th Contatos
+
+      tbody
+        - @proponentes.each do |proponente|
+          tr
+            td= proponente.cpf
+            td= proponente.nome
+            td= proponente.data_nascimento
+            td= proponente.enderecos.map(&:nome).to_sentence
+            td= proponente.contatos.map(&:telefone).to_sentence

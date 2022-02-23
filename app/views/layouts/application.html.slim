@@ -12,9 +12,13 @@ html
 
   body
     .container-fluid
-      nav.navbar.navbar-light.bg-light
-        div.container-fluid
-          a.navbar-brand href="#" DescontoINSS
+      header
+        nav.navbar.fixed-top.navbar-expand-lg.navbar-light style="background-color: #e3f2fd;"
+          div.container-fluid
+            .row
+              .col-3 = image_tag('desconto.png', width: 40)
+              .col-9
+                .center = link_to 'DescontoINSS', '#', class: 'navbar-brand'
 
       br
       

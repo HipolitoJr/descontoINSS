@@ -1,24 +1,30 @@
-.row.align-items-center
-  .col-8
-    span.align-bottom
-      h1 Bem vindo à DescontoINSS!
-      h4.fw-normal Aplicação para cálculo de desconto do INSS sobre o salário/renda, utilizando as faixas padrão do Brasil.
+.card 
+  .card-body
+    .row.align-items-center
+      .col-8
+        span.align-bottom
+          h1 Bem vindo à DescontoINSS!
+          h4.fw-normal Aplicação para cálculo de desconto do INSS sobre o salário/renda, utilizando as faixas padrão do Brasil.
 
-  .col-4
-    main.form-signin
-      form
-        h1.h3.mb-3.fw-normal Faça seu login
-        .form-floating
-          input#floatingInput.form-control placeholder="name@example.com" type="email"
-          label for="floatingInput" Endereço de email
-        
-        .form-floating
-          input#floatingPassword.form-control placeholder="Password" type="password"
-          label for="floatingPassword" Senha
-        
-        .checkbox.mb-3
-          input type="checkbox" value="remember-me" label="Remember"
-          label Continuar conectado
-        
-        button.w-100.btn.btn-lg.btn-primary type="submit"  Sign in
-        p.mt-5.mb-3.text-muted &copy; 2017–2021
+      .col-4
+        main.form-signin
+          form
+            h1.h3.mb-3.fw-normal Faça seu login
+
+            br
+            .form-floating
+              input#floatingInput.form-control placeholder="name@example.com" type="email"
+              label for="floatingInput" Endereço de email
+
+            br
+            .form-floating
+              input#floatingPassword.form-control placeholder="Password" type="password"
+              label for="floatingPassword" Senha
+
+            br
+            .checkbox.mb-3
+              input type="checkbox" value="remember-me" label="Remember"
+              | &nbsp Continuar conectado
+
+            = link_to 'Entrar', proponentes_url, class: 'w-100 btn btn-lg btn-primary'
+            p.center.mt-3.mb-3.text-muted &copy; 2017–2021
