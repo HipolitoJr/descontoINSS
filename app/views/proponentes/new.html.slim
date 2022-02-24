@@ -1,0 +1,18 @@
+.card.mt-2.mb-3
+  .card-header
+    h3 Novo proponente
+
+.card 
+  = simple_form_for @proponente do |f|
+    .card-body
+      .row: .col-6
+        .row
+          .col-4= f.input :cpf, input_html: { 'data-mask': '999.999.999-99' }
+          .col-8= f.input :nome
+
+        br
+        = f.input :data_nascimento
+
+    .card-footer
+      => f.button :submit, 'Salvar', class: 'btn btn-primary'
+      => link_to 'Voltar', proponentes_url, class: 'btn btn-secondary'

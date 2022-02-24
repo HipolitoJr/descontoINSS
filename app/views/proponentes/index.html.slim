@@ -1,6 +1,15 @@
+.card.mt-2.mb-3
+  .card-header
+    .row.align-items-center
+      .col-6
+        h3 Proponentes
+
+      .col-6
+        .float-end= link_to 'Novo proponente', new_proponente_url, class: 'btn btn-success'
+
 .card
   .card-body
-    table.table.table-striped
+    table.table.table-striped.table-resp
       thead 
         tr
           th CPF
