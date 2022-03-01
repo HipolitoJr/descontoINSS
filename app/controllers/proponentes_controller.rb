@@ -5,14 +5,13 @@ class ProponentesController < ApplicationController
   end
 
   def new
-    @proponente = Proponente.new
+    @proponente = Proponente.new(data_nascimento: Date.new(2010,01,01))
   end
 
   def create
     @proponente = Proponente.new(proponente_params)
-    @proponente.save!
-
-    redirect_to proponentes_url
+    @proponente.save
+    respond_with @proponente, location: proponentes_url
   end
 
   private

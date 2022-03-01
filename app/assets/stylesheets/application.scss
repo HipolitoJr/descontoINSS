@@ -10,14 +10,19 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
  */
+
+ @import 'bootstrap';
 
 body {
   display: flex;
   align-items: center;
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: #abc;
+  background-color: #FFF;
+  background: linear-gradient(90deg, #EEF 0%, #FFF 50%, #EEF 100%);
+}
+
+nav.navbar {
+  background-color: #D1D1FF;
 }
