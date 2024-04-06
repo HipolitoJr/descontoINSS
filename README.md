@@ -24,7 +24,7 @@ Aplicação para simular cálculos de descontos do INSS, nos salários de funcio
     rvm use 2.6.2
 ```
 
-> Obs: essa instrução assume que a máquina local já possua o rvm instalado.
+> Obs: essa instrução assume que a máquina local já possua o rvm instalado. Para instalar o rvm, conferir em: https://rvm.io/rvm/install 
 
 3. Instalar as gems do projeto
 
