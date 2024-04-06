@@ -1,24 +1,47 @@
-# README
+# Sobre o Projeto
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Aplicação para simular cálculos de descontos do INSS, nos salários de funcionários cadastrados na plataforma.
 
-Things you may want to cover:
+# Configuração
 
-* Ruby version
+- Ruby 2.6.2
+- Rails 5.2.3
+- Sidekiq 
+- PostgreSQL
 
-* System dependencies
+# Ambiente Dev
 
-* Configuration
+## Como rodar (sem Docker):
 
-* Database creation
+1. Instalar e configurar as dependências externas do projeto:
+ - postgresql
+ - redis
 
-* Database initialization
+2. Instalar ruby versão 2.6.2
 
-* How to run the test suite
+```
+    rvm install 2.6.2
+    rvm use 2.6.2
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+> Obs: essa instrução assume que a máquina local já possua o rvm instalado.
 
-* Deployment instructions
+3. Instalar as gems do projeto
 
-* ...
+```
+    bundle install
+```
+
+4. Configurar o banco de dados 
+
+```
+    rails db:setup
+```
+
+5. Subir o servidor da aplicação
+
+```
+    rails server
+```
+
+Após isso, a aplicação estará disponível em: http://localhost:3000
